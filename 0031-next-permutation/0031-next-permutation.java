@@ -11,7 +11,15 @@ class Solution {
             }
         }
         if(deci==-1){
-            reverse(nums,0,len-1);
+            int i=0;
+            int j=len-1;
+            while(i<j){
+                int temp=nums[i];
+                nums[i]=nums[j];
+                nums[j]=temp;
+                i++;
+                j--;
+            }
         }else{
         
         
@@ -21,20 +29,22 @@ class Solution {
                 break;
             }
         }
-        swap(nums,deci,grei);
+        //swap(nums,deci,grei);
+            int temp=nums[deci];
+            nums[deci]=nums[grei];
+            nums[grei]=temp;
         
-        reverse(nums,deci+1,len-1);
+        //reverse(nums,deci+1,len-1);
+           int i=deci+1,j=len-1;
+            while(i<j){
+                int t=nums[i];
+                nums[i]=nums[j];
+                nums[j]=t;
+                i++;j--;
+            }
         }
         
     }
     
-    private void swap(int[] nums,int i,int j){
-        int temp=nums[i];
-        nums[i]=nums[j];
-        nums[j]=temp;
-    }
     
-    private void reverse(int[] num,int i,int j){
-        while(i<j) swap(num,i++,j--);
-    }
 }
