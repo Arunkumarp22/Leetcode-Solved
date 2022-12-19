@@ -11,7 +11,7 @@ class Solution {
             else{
                 
                 max=Math.max(max,(j-i)+1);
-            System.out.println(i+" "+j);
+            //System.out.println(i+" "+j);
             set.add(s.charAt(j));
             j++;
             }
