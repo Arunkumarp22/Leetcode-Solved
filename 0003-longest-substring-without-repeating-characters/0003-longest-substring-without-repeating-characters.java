@@ -9,7 +9,7 @@ class Solution {
                 i++;
             }
             else{
-                set.add(s.charAt(i));
+                //set.add(s.charAt(i));
                 max=Math.max(max,(j-i)+1);
             System.out.println(i+" "+j);
             set.add(s.charAt(j));
