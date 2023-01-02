@@ -1,6 +1,6 @@
 class Solution {
     public boolean detectCapitalUse(String word) {
-        int countu=0,countl=0;
+        /*int countu=0,countl=0;
         for(int i=0;i<word.length();i++){
             if(Character.isUpperCase(word.charAt(i))){
                 countu++;
@@ -13,6 +13,7 @@ class Solution {
             return true;
         }else{
             return false;
-        }
+        }*/
+         return word.matches("[A-Z]+|[a-z]+|[A-Z][a-z]+");
     }
 }
