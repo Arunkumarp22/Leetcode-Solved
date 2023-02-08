@@ -1,29 +1,16 @@
 class Solution {
     public List<Integer> selfDividingNumbers(int left, int right) {
-        List<Integer> res=new ArrayList<>();
-        for(int i=left;i<=right;i++){
-            if(i<=9){
-                res.add(i);
-                continue;
+        List<Integer> list = new ArrayList<>();
+        for (int i = left; i <= right; i++) {
+            int j = i;
+            while(j > 0) {
+                if ((j % 10 == 0) || (i % (j % 10) != 0)){
+                    break;
+                }
+                j /= 10;
             }
-            
-            if(check(i)){
-                res.add(i);
-            }
+            if (j == 0) list.add(i); 
         }
-        return res;
-        
-    }
-    
-    public boolean check(int num){
-        String s=String.valueOf(num);
-        for(char ch:s.toCharArray()){
-            if(ch=='0') return false;
-            if(num%(ch-'0')!=0){
-                return false;
-            }
-        }
-        
-        return true;
+        return list;
     }
 }
