@@ -1,6 +1,6 @@
 class Solution {
     public int numberOfSteps(int num) {
-        int count=0;
+        /*int count=0;
         while(num!=0){
             if(num%2==0){
                 num/=2;
@@ -8,7 +8,9 @@ class Solution {
                 num-=1;
             }
             count++;
-        }
-        return count;
+        }*/
+        return Integer.toBinaryString(num).length() - 1 + Integer.bitCount(num);
+
+        //return count;
     }
 }
