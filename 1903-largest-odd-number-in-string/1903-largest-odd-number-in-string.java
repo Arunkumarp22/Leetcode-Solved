@@ -4,10 +4,10 @@ class Solution {
         for(i=num.length()-1;i>=0;i--){
             int a=num.charAt(i)-'0';
             
-            if(a%2==1) break;
+            if(a%2==1) return num.substring(0,i+1);
             System.out.print(a);
         }
         
-        return i<0?"":num.substring(0,i+1);
+        return "";
     }
 }
